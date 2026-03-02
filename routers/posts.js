@@ -73,4 +73,9 @@ router.get("/", (req,res) => {
     res.json(posts);
 });
 
+// # show
+router.get("/:id", (req,res) => {
+    res.send(`Visualizzato post ${req.params.id}`);
+})
+
 module.exports = router;
