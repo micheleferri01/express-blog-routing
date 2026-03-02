@@ -63,4 +63,15 @@ router.post("/", (req,res) => {
     res.send("Creato nuovo post");
 });
 
+// #update
+router.put("/:id", (req,res) => {
+    res.send(`il post ${req.params.id} è stato modificato interamente`);
+});
+
+// # modify
+router.patch("/:id", (req, res) => {
+    res.send(`il post ${req.params.id} è stato modificato parzialmente`);
+});
+
+
 module.exports = router;
